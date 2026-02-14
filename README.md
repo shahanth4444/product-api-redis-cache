@@ -579,26 +579,3 @@ docker-compose up -d
 # Database will be recreated with seed data
 ```
 
-## 📝 Core Requirements Checklist
-
-✅ API starts on configurable port (8080)  
-✅ POST /products returns 201 with product details  
-✅ GET /products/{id} retrieves single product  
-✅ Cache hit: Product retrieved from Redis  
-✅ Cache miss: Product from database, then cached  
-✅ Configurable TTL for cache entries  
-✅ PUT /products/{id} updates product, returns 200  
-✅ PUT invalidates cache automatically  
-✅ DELETE /products/{id} deletes product, returns 204  
-✅ DELETE invalidates cache automatically  
-✅ GET after DELETE returns 404  
-✅ Redis integrated via Docker network  
-✅ Graceful Redis failure handling  
-✅ Input validation on POST/PUT  
-✅ Appropriate HTTP status codes  
-✅ Single `docker-compose up` command  
-✅ Automated tests for cache hit/miss/invalidation  
-✅ Comprehensive README.md  
-✅ .env.example with all variables  
-✅ Optimized Dockerfile (multi-stage build)  
-
